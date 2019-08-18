@@ -6,11 +6,23 @@ typedef long long ll;
 int main()
 {
     // 入力
-    int a;
-    cin >> a;
+    int N;
+    cin >> N;
+
+    vector<int> v(N);
+    rep (i, N) {
+        cin >> v[i];
+    }
+    sort(v.begin(), v.end());
+
+    double sum = v[0];
+    for (int i = 1; i < N; i++) {
+        sum += v[i];
+        sum = sum / 2;
+    }
 
     // 出力
-    cout << a << endl;
+    cout << sum << endl;
     return 0;
 }
 
