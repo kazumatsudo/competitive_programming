@@ -6,11 +6,18 @@ typedef long long ll;
 int main()
 {
     // 入力
-    int a;
-    cin >> a;
+    int N;
+    cin >> N;
+
+    double sum = 0;
+    rep (i, N) {
+        double a;
+        cin >> a;
+
+        sum += 1 / a;
+    }
 
     // 出力
-    cout << a << endl;
+    printf("%lf", 1 / sum);
     return 0;
 }
-
