@@ -2,6 +2,7 @@
 
 # ./create_cpp_file.sh filename で競技プログラミング用のファイルを作成する
 
+
 if test -e "$1.cpp"; then
   echo "$1.cpp found."
   exit
