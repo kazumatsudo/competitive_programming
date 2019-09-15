@@ -6,10 +6,30 @@ typedef long long ll;
 
 int main()
 {
-    int a;
-    cin >> a;
+    ll N, M;
+    cin >> N >> M;
 
-    cout << "abc141/d" << endl;
+    priority_queue<ll> A;
+    rep (i, N) {
+        ll price;
+        cin >> price;
+        A.push(price);
+    }
+
+    rep (i, M) {
+        ll price = A.top() / 2;
+        A.pop();
+
+        A.push(price);
+    }
+
+    ll answer = 0;
+    while (!A.empty()) {
+        answer += A.top();
+        A.pop();
+    }
+
+    cout << answer << endl;
     return 0;
 }
 
