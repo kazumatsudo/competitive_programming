@@ -6,10 +6,24 @@ typedef long long ll;
 
 int main()
 {
-    int a;
-    cin >> a;
+    int N, K;
+    cin >> N >> K;
 
-    cout << a << endl;
+    string S;
+    cin >> S;
+
+    int ans = 0;
+    rep (i, N) {
+        if (i != 0) {
+            if (S[i] == 'L' && S[i - 1] == 'L') {
+                ans += 1;
+            } else if (S[i] == 'R' && S[i - 1] == 'R'){
+                ans += 1;
+            }
+        }
+    }
+
+    cout << min(N - 1, ans + K * 2) << endl;
     return 0;
 }
 
