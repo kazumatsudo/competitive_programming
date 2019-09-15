@@ -6,10 +6,16 @@ typedef long long ll;
 
 int main()
 {
-    int a;
-    cin >> a;
+    string S;
+    cin >> S;
 
-    cout << "abc141/a" << endl;
+    if (S == "Sunny") {
+        cout << "Cloudy" << endl;
+    } else if (S == "Cloudy") {
+        cout << "Rainy" << endl;
+    } else {
+        cout << "Sunny" << endl;
+    }
+
     return 0;
 }
-
