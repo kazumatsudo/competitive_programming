@@ -36,6 +36,7 @@ fi
 
 mkdir $directory_name
 cd $directory_name
+echo "project(${directory_name})" >> CMakeLists.txt
 echo "set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")" >> CMakeLists.txt
 
 create_file $directory_name a
