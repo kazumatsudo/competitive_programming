@@ -6,10 +6,18 @@ typedef long long ll;
 
 int main()
 {
-    int a;
-    cin >> a;
+    int N;
+    cin >> N;
 
-    cout << "abc142/c" << endl;
+    vector<int> A(N);
+    rep(i, N) {
+        int index;
+        cin >> index;
+        A[index - 1] = i + 1;
+    }
+
+    rep(i, N) {
+        printf("%d%c", A[i], i == N - 1 ? '\n' : ' ');
+    }
     return 0;
 }
-
