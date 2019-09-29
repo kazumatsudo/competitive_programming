@@ -6,10 +6,18 @@ typedef long long ll;
 
 int main()
 {
-    int a;
-    cin >> a;
+    int N, K;
+    cin >> N >> K;
 
-    cout << "abc142/b" << endl;
+    int ans = 0;
+    rep(i, N) {
+        int height;
+        cin >> height;
+        if (height >= K) {
+            ans++;
+        }
+    }
+
+    cout << ans << endl;
     return 0;
 }
-
