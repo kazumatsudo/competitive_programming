@@ -6,10 +6,28 @@ typedef long long ll;
 
 int main()
 {
-    int a;
-    cin >> a;
+    ll A, B;
+    cin >> A >> B;
 
-    cout << "abc142/d" << endl;
+    set<ll> primes;
+    primes.insert(1);
+    for (ll i = 2; i * i <= A; i++) {
+        while (A % i == 0) {
+            primes.insert(i);
+            A /= i;
+        }
+    }
+    if (A != 1) {
+        primes.insert(A);
+    }
+
+    int ans = 0;
+    for (ll prime: primes) {
+        if (B % prime == 0) {
+            ans++;
+        }
+    }
+
+    cout << ans << endl;
     return 0;
 }
-
