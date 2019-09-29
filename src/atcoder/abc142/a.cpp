@@ -6,10 +6,13 @@ typedef long long ll;
 
 int main()
 {
-    int a;
-    cin >> a;
+    double N;
+    cin >> N;
 
-    cout << "abc142/a" << endl;
+    double odd, ans;
+    odd = ceil(N / 2);
+    ans = odd / N;
+
+    printf("%.6f", ans);
     return 0;
 }
-
